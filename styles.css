@@ -1,0 +1,99 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    max-width: 25rem;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem; /* Расстояние между контейнерами */
+}
+
+.logo-container {
+    margin-top: -2rem;
+    padding-bottom: 7rem;
+}
+
+.logo-container img {
+    width: 6.25rem;
+    height: auto;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9375rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 4rem;
+    border-radius: 1.875rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.125rem;
+    justify-content: center;
+    height: 3.125rem;
+    box-sizing: border-box;
+    background-color: #502E2E;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 22rem;
+    white-space: nowrap;
+}
+
+.button:hover {
+    background-color: #633a0f;
+}
+
+.red {
+    background-color: #502E2E;
+}
+
+.icon {
+    margin-right: 0.625rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footer-container {
+    margin-top: 1.25rem;
+}
+
+.footer {
+    font-size: 1.3rem;
+    color: #502E2E;
+    font-weight: 800;
+}
+
+/* Адаптивность */
+@media (max-width: 37.5rem) {
+    .container {
+        padding: 0.625rem;
+    }
+    .logo-container img {
+        width: 19rem;
+    }
+    .button {
+        font-size: 1.6rem;
+        height: 4.5rem;
+    }
+    .icon {
+        width: 2.4rem; /* Увеличиваем иконки на маленьких экранах */
+        height: 2.5rem;
+        margin-right: 1.25rem; /* Увеличиваем отступ */
+    }
+}
