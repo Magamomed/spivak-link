@@ -17,10 +17,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem; /* Расстояние между контейнерами */
-    opacity: 0; /* Начальная прозрачность 0 */
-    transform: translateY(-100px); /* Начальное смещение сверху на 100px */
-    animation: fadeInDown 1.5s ease forwards; /* Анимация появления сверху вниз */
+    gap: 1.25rem;
+    opacity: 0; 
+    transform: translateY(-100px); 
+    animation: fadeInDown 1.5s ease forwards; 
 }
 
 .logo-container {
@@ -56,7 +56,7 @@ body {
     width: 100%;
     max-width: 22rem;
     white-space: nowrap;
-    padding-left: 1.5rem; /* Дополнительный отступ слева */
+    padding-left: 1.5rem; 
 }
 
 .button:hover {
@@ -71,18 +71,18 @@ body {
     margin-right: 0.625rem;
     width: 1.5rem;
     height: 1.5rem;
-    object-fit: contain; /* Убедимся, что иконки не искажаются */
+    object-fit: contain; 
 }
 
 .center-text {
-    position: relative; /* Для позиционирования текста */
+    position: relative; 
 }
 
 .center-text .button-text {
     position: absolute;
     left: 53%;
-    transform: translateX(-50%); /* Центрируем текст относительно центра кнопки */
-    white-space: nowrap; /* Предотвращаем перенос строки */
+    transform: translateX(-50%); 
+    white-space: nowrap; 
 }
 
 .footer-container {
@@ -90,7 +90,7 @@ body {
 }
 
 .footer {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: #502E2E;
     font-weight: 800;
 }
@@ -98,11 +98,11 @@ body {
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translateY(-100px); /* Начинаем ниже экрана */
+        transform: translateY(-100px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Возвращаемся в исходное положение */
+        transform: translateY(0); 
     }
 }
 
