@@ -18,11 +18,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1.25rem; /* Расстояние между контейнерами */
+    opacity: 0; /* Начальная прозрачность 0 */
+    transform: translateY(-100px); /* Начальное смещение сверху на 100px */
+    animation: fadeInDown 1.5s ease forwards; /* Анимация появления сверху вниз */
 }
 
 .logo-container {
     margin-top: -2rem;
-    padding-bottom: 7rem;
+    padding-bottom: 3rem;
 }
 
 .logo-container img {
@@ -39,13 +42,13 @@ body {
 .button {
     display: flex;
     align-items: center;
-    padding: 0.625rem 4rem;
+    padding: 0.625rem 21rem;
     border-radius: 1.875rem;
     color: #fff;
     text-decoration: none;
     font-weight: 800;
     font-size: 1.125rem;
-    justify-content: center;
+    justify-content: flex-start;
     height: 3.125rem;
     box-sizing: border-box;
     background-color: #502E2E;
@@ -53,6 +56,7 @@ body {
     width: 100%;
     max-width: 22rem;
     white-space: nowrap;
+    padding-left: 1.5rem; /* Дополнительный отступ слева */
 }
 
 .button:hover {
@@ -67,6 +71,18 @@ body {
     margin-right: 0.625rem;
     width: 1.5rem;
     height: 1.5rem;
+    object-fit: contain; /* Убедимся, что иконки не искажаются */
+}
+
+.center-text {
+    position: relative; /* Для позиционирования текста */
+}
+
+.center-text .button-text {
+    position: absolute;
+    left: 53%;
+    transform: translateX(-50%); /* Центрируем текст относительно центра кнопки */
+    white-space: nowrap; /* Предотвращаем перенос строки */
 }
 
 .footer-container {
@@ -79,6 +95,17 @@ body {
     font-weight: 800;
 }
 
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px); /* Начинаем ниже экрана */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Возвращаемся в исходное положение */
+    }
+}
+
 /* Адаптивность */
 @media (max-width: 37.5rem) {
     .container {
@@ -86,14 +113,20 @@ body {
     }
     .logo-container img {
         width: 19rem;
+        height: auto;   /* Сохраняем пропорции */
+        object-fit: contain; /* Убедимся, что изображение помещается без искажений */
     }
     .button {
         font-size: 1.6rem;
         height: 4.5rem;
+        padding-left: 2rem; /* Увеличиваем отступ слева на маленьких экранах */
     }
     .icon {
         width: 2.4rem; /* Увеличиваем иконки на маленьких экранах */
         height: 2.5rem;
         margin-right: 1.25rem; /* Увеличиваем отступ */
+    }
+    .center-text .button-text {
+        font-size: 1.6rem; /* Синхронизируем размер текста */
     }
 }
